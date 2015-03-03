@@ -13,7 +13,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.35">
-      <project>1-LogIn-Compile</project>
+      <project>CI-1-LogIn-Compile</project>
       <filter>dist/workspace.zip</filter>
       <target>.</target>
       <excludes></excludes>
