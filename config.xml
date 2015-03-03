@@ -35,7 +35,7 @@
       <gridBuilder class="au.com.centrumsystems.hudson.plugin.buildpipeline.DownstreamProjectGridBuilder">
         <firstJob>1-LogIn-Compile</firstJob>
       </gridBuilder>
-      <noOfDisplayedBuilds>1</noOfDisplayedBuilds>
+      <noOfDisplayedBuilds>10</noOfDisplayedBuilds>
       <buildViewTitle></buildViewTitle>
       <consoleOutputLinkStyle>Lightbox</consoleOutputLinkStyle>
       <cssUrl></cssUrl>
