@@ -26,8 +26,19 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
-  <builders/>
+  <builders>
+    <hudson.tasks.Ant plugin="ant@1.2">
+      <targets>compile clean zip</targets>
+    </hudson.tasks.Ant>
+  </builders>
   <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>dist/workspace.zip</artifacts>
+      <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+    </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.BuildTrigger>
       <childProjects>2-LogIn-Unit_Testing, 2-LogIn-Integration_Testing</childProjects>
       <threshold>
