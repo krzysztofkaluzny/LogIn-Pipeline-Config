@@ -28,10 +28,15 @@
   <concurrentBuild>false</concurrentBuild>
   <builders/>
   <publishers>
-    <au.com.centrumsystems.hudson.plugin.buildpipeline.trigger.BuildPipelineTrigger plugin="build-pipeline-plugin@1.4.5">
-      <configs/>
-      <downstreamProjectNames>2-LogIn-Unit_Testing,2-LogIn-Integration_Testing</downstreamProjectNames>
-    </au.com.centrumsystems.hudson.plugin.buildpipeline.trigger.BuildPipelineTrigger>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>2-LogIn-Unit_Testing, 2-LogIn-Integration_Testing</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
     <join.JoinTrigger plugin="join@1.15">
       <joinProjects>3-LogIn-Deploy_to_PROD</joinProjects>
       <joinPublishers/>
