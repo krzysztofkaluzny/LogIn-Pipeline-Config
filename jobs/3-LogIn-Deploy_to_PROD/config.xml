@@ -23,6 +23,9 @@
     <hudson.tasks.Shell>
       <command>unzip dist/workspace.zip</command>
     </hudson.tasks.Shell>
+    <hudson.tasks.Ant plugin="ant@1.2">
+      <targets>package</targets>
+    </hudson.tasks.Ant>
   </builders>
   <publishers>
     <hudson.plugins.deploy.DeployPublisher plugin="deploy@1.10">
