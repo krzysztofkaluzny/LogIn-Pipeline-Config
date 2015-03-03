@@ -13,36 +13,25 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.35">
-      <project>CI-1-LogIn-Compile</project>
+      <project>1-LogIn-Compile</project>
       <filter>dist/workspace.zip</filter>
       <target>.</target>
       <excludes></excludes>
-      <selector class="hudson.plugins.copyartifact.TriggeredBuildSelector">
-        <upstreamFilterStrategy>UseGlobalSetting</upstreamFilterStrategy>
-      </selector>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
       <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
     </hudson.plugins.copyartifact.CopyArtifact>
     <hudson.tasks.Shell>
       <command>unzip dist/workspace.zip</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Ant plugin="ant@1.2">
-      <targets>report.junit -Dtest.package=unit</targets>
+      <targets>report.junit -Dtest.package=integration</targets>
     </hudson.tasks.Ant>
   </builders>
   <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>CI-3-LogIn-Integration_Testing</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
     <hudson.plugins.doclinks.DocLinksPublisher plugin="doclinks@0.6">
       <documents>
         <hudson.plugins.doclinks.Document>
-          <title>JUnit report</title>
+          <title>JUnit reports</title>
           <directory>report/junit</directory>
           <recursive>true</recursive>
           <id>1</id>
