@@ -32,6 +32,11 @@
       <configs/>
       <downstreamProjectNames>2-LogIn-Unit_Testing,2-LogIn-Integration_Testing</downstreamProjectNames>
     </au.com.centrumsystems.hudson.plugin.buildpipeline.trigger.BuildPipelineTrigger>
+    <join.JoinTrigger plugin="join@1.15">
+      <joinProjects>3-LogIn-Deploy_to_PROD</joinProjects>
+      <joinPublishers/>
+      <evenIfDownstreamUnstable>false</evenIfDownstreamUnstable>
+    </join.JoinTrigger>
   </publishers>
   <buildWrappers/>
 </project>
