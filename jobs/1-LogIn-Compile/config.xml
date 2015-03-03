@@ -27,6 +27,11 @@
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders/>
-  <publishers/>
+  <publishers>
+    <au.com.centrumsystems.hudson.plugin.buildpipeline.trigger.BuildPipelineTrigger plugin="build-pipeline-plugin@1.4.5">
+      <configs/>
+      <downstreamProjectNames>2-LogIn-Unit_Testing,2-LogIn-Integration_Testing</downstreamProjectNames>
+    </au.com.centrumsystems.hudson.plugin.buildpipeline.trigger.BuildPipelineTrigger>
+  </publishers>
   <buildWrappers/>
 </project>
