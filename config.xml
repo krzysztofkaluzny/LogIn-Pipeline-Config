@@ -34,6 +34,7 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>CI-1-LogIn-Compile</string>
       </jobNames>
       <jobFilters/>
       <columns>
