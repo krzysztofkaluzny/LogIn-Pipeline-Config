@@ -30,6 +30,15 @@
     </hudson.tasks.Ant>
   </builders>
   <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>CI-4-LogIn-Deploy_to_PROD</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
     <hudson.plugins.doclinks.DocLinksPublisher plugin="doclinks@0.6">
       <documents>
         <hudson.plugins.doclinks.Document>
