@@ -40,7 +40,7 @@
       <defaultExcludes>true</defaultExcludes>
     </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.BuildTrigger>
-      <childProjects>2-LogIn-Unit_Testing, 2-LogIn-Integration_Testing</childProjects>
+      <childProjects>2-LogIn-Unit_Testing, 2-LogIn-Integration_Testing, 2-LogIn-Code_Analysis</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
